@@ -70,7 +70,7 @@ open_door.py --username email@domain.com --password yourpassword --deviceId 1234
 open_door.py --username email@domain.com --password yourpassword --reauth
 ```
 
-## How it works
+## 👷 How it works
 
 The script sends an HTTP request to the Fermax Blue Servers to authenticate the user and obtain an access token. The access token is cached into a JSON file (in the script directory) to avoid unnecessary API calls in the future.
 
