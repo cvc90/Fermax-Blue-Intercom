@@ -27,7 +27,7 @@ Fermax Blue script to connect with the API (Show user information, Show intercom
 
 ## Examples
 
-### Home Assistant
+### 🏠 Home Assistant
 
 You can use this script with Home Assistant using the `shell_command` integration.
 
@@ -78,7 +78,7 @@ The script then sends another HTTP request to the Fermax Blue Servers to obtain 
 
 Finally, the script sends a third HTTP request to the Fermax Blue API to open the door.
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 This script was tested on a Fermax 9449.
 
