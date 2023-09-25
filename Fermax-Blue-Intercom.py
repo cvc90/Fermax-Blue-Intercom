@@ -42,7 +42,7 @@ if provided_doors:
     accessIds = list(map(lambda accessId: json.loads(accessId), accessIds))
 
 
-CACHE_FILENAME = 'portal_cache.json'
+CACHE_FILENAME = 'Fermax-Blue-Intercom-cache.json'
 DATETIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
