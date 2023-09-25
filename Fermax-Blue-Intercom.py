@@ -242,39 +242,12 @@ def open_door():
 
 # Program
 
-access_token = None
+# Get the access token.
+bearer_token = get_token()
 
-if cache and not reauth:
-    access_token = read_cached_token()
+# Execute a pairings
+pairings(bearer_token)
 
-if not access_token:
-    logging.info('Logging in into Blue...')
-
-    access_token = auth(cache, username, password)
-
-bearer_token = f'Bearer {access_token}'
-
-if not provided_doors:
-    logging.info('Success, getting devices...')
-
-    tag, deviceId, accessIds = pairings(bearer_token)
-
-    logging.info(
-        f'Found {tag} with deviceId {deviceId} ({len(accessIds)} doors), calling directed opendoor...')
-
-else:
-    logging.info(
-        f'Success, using provided deviceId {deviceId}, calling directed opendoor...')
-
-if not reauth:
-    # If user provided doors we open them all
-    if provided_doors:
-        for accessId in accessIds:
-            result = directed_opendoor(bearer_token, deviceId, accessId)
-            logging.info(f'Result: {result}')
-            time.sleep(7)
-
-    # Otherwise we just open the first one (ZERO?)
-    else:
-        result = directed_opendoor(bearer_token, deviceId, accessIds[0])
-        logging.info(f'Result: {result}')
+# Get the device ID and access ID.
+deviceId = pairings(bearer_token)[1]
+accessId = pairings(bearer_token)[2]
