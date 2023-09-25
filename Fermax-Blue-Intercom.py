@@ -23,7 +23,6 @@ import time
 
 from urllib.parse import quote
 
-
 # Input values
 
 parser = argparse.ArgumentParser()
@@ -183,7 +182,6 @@ def directed_opendoor(bearer_token: str, deviceId: str, accessId: str) -> str:
         'POST', directed_opendoor_url, headers=get_json_headers(bearer_token), data=payload)
 
     return response.text
-
 
 # Program
 
