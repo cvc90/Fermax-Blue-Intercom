@@ -38,6 +38,8 @@ parser.add_argument('--cache', type=bool,
                     help='Optionally set if cache is used to save/read auth token (enabled by default)', default=True)
 parser.add_argument('--reauth', action='store_true',
                     help='Forces authentication (when using this option no door will be open)')
+parser.add_argument('--open-door', action='store_true',
+                    help='Acción de abrir la puerta')
 args = parser.parse_args()
 
 username = args.username
@@ -46,6 +48,7 @@ deviceId = args.deviceId
 accessIds = args.accessId
 cache = args.cache
 reauth = args.reauth
+opendoor = args.open_door
 
 if (deviceId and not accessIds) or (accessIds and not deviceId):
     raise Exception('Both deviceId and accessId must be provided')
@@ -251,3 +254,7 @@ pairings(bearer_token)
 # Get the device ID and access ID.
 deviceId = pairings(bearer_token)[1]
 accessId = pairings(bearer_token)[2]
+
+# If the user enters the argument "--open-door"
+if args.open_door:
+	open_door()	
