@@ -89,11 +89,11 @@ This script was tested on a Fermax 9449.
 
 ## 📑 Minimum System Requirements
 
-- Python3
+- [Python3](https://www.python.org/downloads/)
 
 ## 📑 Recommended System Requirements
 
-- Python3.11
+- [Python3.11](https://www.python.org/downloads/)
 
 ## 🏴 Translations of this file
 
