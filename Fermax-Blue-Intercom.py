@@ -1,3 +1,17 @@
+#######################################################################################
+#                                  Fermax-Blue-Intercom                               #
+#                      https://github.com/cvc90/Fermax-Blue-Intercom/                 #
+#                                                                                     #
+#                     Fermax Blue script to connect with the API                      #
+# (Show user information, Show intercom information, Intercom history, open the door) #
+#                                                                                     #
+#                         Script file Fermax-Blue-Intercom.py                         #
+#               A script that manages Fermax services through the Fermax API          #
+#                                                                                     #
+#   Usage: python3 Fermax-Blue-Intercom.py --username username --password password    #
+#######################################################################################
+
+
 import requests
 import json
 import logging
