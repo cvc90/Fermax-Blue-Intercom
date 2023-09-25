@@ -190,6 +190,25 @@ def directed_opendoor(bearer_token: str, deviceId: str, accessId: str) -> str:
 
     return response.text
 
+# Function get_token()
+
+def get_token():
+
+	# Obtenemos Token
+	access_token = None
+
+	if cache and not reauth:
+		access_token = read_cached_token()
+
+	if not access_token:
+		logging.info('Logging in into Blue...')
+
+		access_token = auth(cache, username, password)
+
+	bearer_token = f'Bearer {access_token}'
+	
+	return bearer_token
+
 # Program
 
 access_token = None
