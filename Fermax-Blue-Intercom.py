@@ -11,6 +11,7 @@
 #   Usage: python3 Fermax-Blue-Intercom.py --username username --password password    #
 #######################################################################################
 
+# Imports required
 
 import requests
 import json
