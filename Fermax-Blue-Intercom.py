@@ -55,11 +55,18 @@ provided_doors = deviceId and accessIds
 if provided_doors:
     accessIds = list(map(lambda accessId: json.loads(accessId), accessIds))
 
+# Cache file name
 
 CACHE_FILENAME = 'Fermax-Blue-Intercom-cache.json'
+
+# Date format
+
 DATETIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 
+# Get current directory
 script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Cache file path
 cache_file_path = os.path.join(script_dir, CACHE_FILENAME)
 
 
