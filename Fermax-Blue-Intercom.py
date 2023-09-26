@@ -441,16 +441,12 @@ if args.user_info:
 	get_user_info()
 
 # If the user enters the argument "--user-info-json"
-if args.user_info:
+if args.user_info_json:
 	get_user_info_json()
 
 # If the user enters the argument "--pairings-info"
 if args.pairings_info:
 	get_pairings_info()
-
-# If the user enters the argument "--pairings-info-json"
-if args.pairings_info_json:
-	get_pairings_info_json()
 
 # If the user enters the argument "--pairings-info-json"
 if args.pairings_info_json:
