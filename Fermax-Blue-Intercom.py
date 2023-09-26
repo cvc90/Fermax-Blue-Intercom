@@ -417,6 +417,69 @@ def get_mydevice_info_json():
 	print(f"------------")
 	print(f" {data}")
 
+# Función get_mydevice_history()
+def get_mydevice_history():
+	"""Get the user's intercom history"""
+	
+	# Perform the GET request
+	url = "https://blue.fermax.com/services2/api/v1/services/{}".format(deviceId)
+	response = requests.get(url, headers=get_json_headers(bearer_token))
+
+	# Check the status of the response
+	if response.status_code != 200:
+		print(f"\nError when obtaining information from the Intercom: Error {response.status_code}")
+		return
+			
+	# Decode the content of the response
+	data = response.json()
+
+	# Show the user's intercom history
+	print(f"\n------------")
+	print(f"INTERCOM HISTORY")
+	print(f"------------")	
+	print(f"Access name: {data[0].setdefault('AccessName', None)}")
+	print(f"Auto on: {data[0]['AutoOn']}")
+	print("Call divert: {data['CallDivert']}")
+	print("Call registry: {data['CallRegistry']}")
+	print("Change video source: {data['ChangeVideoSource']}")
+	print("Check information': {data['CheckInformation']}")
+	print("DND: {data['DND']}")
+	print("Doormatic: {data['Doormatic']}")
+	print("Event registry: {data['EventRegistry']}")
+	print("F1: {data['F1']}")
+	print("F1 options: {data['F1Options']}")
+	print("Geo: {data['Geo']}")
+	print("Guard: {data['Guard']}")
+	print("Guests {data['Guest5']}")
+	print("Administrar desvío de llamadas: {data['ManageCallDivert']}")
+	print("Puerta abierta: {data['OpenDoor']}")
+	print("Photocaller: {data['Photocaller']}")
+	print("Ringtone: {data['Ringtone']}")
+	print("Sessions unlimited: {data['SessionsUnlimited']}")
+	print("TZ: {data['TZ']}")
+
+# Función get_mydevice_history_json()
+def get_mydevice_history_json():
+	"""Obtiene el historial del interfono del usuario en formato json."""
+	
+	# Perform the GET request
+	url = "https://blue.fermax.com/services2/api/v1/services/{}".format(deviceId)
+	response = requests.get(url, headers=get_json_headers(bearer_token))
+
+	# Check the status of the response
+	if response.status_code != 200:
+		print(f"\nError al obtener la información del Interfono: {response.status_code}")
+		return
+			
+	# Decode the content of the response
+	data = response.json()
+
+	# Mostramos la información del usuario
+	print(f"\n------------")
+	print(f"HISTORIAL INTERFONO (JSON)")
+	print(f"------------")
+	print(f"{data}")
+
 # Function open_door()
 def open_door():
 	"""Open door"""
