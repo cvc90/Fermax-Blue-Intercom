@@ -270,8 +270,43 @@ def get_user_info_json():
 	print(f"------------")
 	print(f"{data}")
 
-# Function open_door()
+# Function get_pairings_info().
+def get_pairings_info():
+	"""Obtains information from the user's paired devices"""
 
+	# Perform the GET request
+	url = "https://blue.fermax.com/pairing/api/v3/pairings/me"
+	response = requests.get(url, headers=get_json_headers(bearer_token))
+
+	# Check the status of the response
+	if response.status_code != 200:
+		print(f"\nError al obtener la información de los dispositivos pareados: {response.status_code}")
+		return
+
+	# Decode the content of the response
+	data2 = response.json()
+
+	# Show the information of the user's paired devices
+	print(f"\n------------")
+	print(f"INFO PAIRED DEVICES")
+	print(f"------------")
+	print(f"ID: {data2[0].get('id')}")
+	print(f"Device Id: {data2[0].get('deviceId')}")
+	print(f"Tag: {data2[0].get('tag')}")
+	print(f"Status: {data2[0].get('status')}")
+	print(f"Updated at: {data2[0].get('updatedAt')}")
+	print(f"Created at: {data2[0].get('createdAt')}")
+	print(f"App Build: {data2[0].get('appBuild')}")
+	print(f"App Version: {data2[0].get('appVersion')}")
+	print(f"Phone Model: {data2[0].get('phoneModel')}")
+	print(f"phone OS: {data2[0].get('phoneOS')}")	
+	print(f"Home: {data2[0].get('home')}")
+	print(f"Address: {data2[0].get('address')}")
+	print(f"Access door map: {data2[0].get('accessDoorMap')}")	
+	print(f"Master: {data2[0].get('master')}")
+
+
+# Function open_door()
 def open_door():
 	"""Open door"""
 	
@@ -319,6 +354,10 @@ if args.user_info:
 # If the user enters the argument "--user-info-json"
 if args.user_info:
 	get_user_info_json()
+
+# If the user enters the argument "--pairings-info"
+if args.pairings_info:
+	get_pairings_info()
 
 # If the user enters the argument "--open-door"
 if args.open_door:
