@@ -351,6 +351,49 @@ def get_pairings_info_json():
 	print(f"------------")
 	print(f"ID: {data2}")
 
+# Función get_mydevice_info()
+def get_mydevice_info():
+	"""Obtains information from the user's intercom"""
+
+	# Perform the GET request
+	url = "https://blue.fermax.com/deviceaction/api/v1/device/{}".format(deviceId)
+	response = requests.get(url, headers=get_json_headers(bearer_token))
+
+	# Check the status of the response
+	if response.status_code != 200:
+		print(f"\nError obtaining Intercom information: Error {response.status_code}")
+		return
+			
+	# Decode the content of the response
+	data = response.json()
+
+	# Show the user's intercom information
+	print(f"\n------------")
+	print(f"INTERCOM INFO")
+	print(f"------------")
+	print(f"Device ID: {data['deviceId']}")
+	print(f"Connection stat: {data['connectionState']}")
+	print(f"Status: {data['status']}")
+	print(f"Installation ID: {data['installationId']}")
+	print(f"Family: {data['family']}")
+	print(f"Type: {data['type']}")
+	print(f"Subtype: {data['subtype']}")
+	print(f"Num block: {data['numBlock']}")
+	print(f"Num subblock: {data['numSubblock']}")
+	print(f"Unit number: {data['unitNumber']}")
+	print(f"Connectable: {data['connectable']}")
+	print(f"Icc ID: {data['iccid']}")
+	print(f"Divert service: {data['divertService']}")
+	print(f"Photocaller: {data['photocaller']}")
+	print(f"Wireless signal: {data['wirelessSignal']}")
+	print(f"BlueStream: {data['blueStream']}")
+	print(f"Phone: {data['phone']}")
+	print(f"Monitor: {data['monitor']}")
+	print(f"Panel or edibox: {data['panelOrEdibox']}")
+	print(f"Monitor or guard unit: {data['monitorOrGuardUnit']}")
+	print(f"Terminal: {data['terminal']}")
+	print(f"Streaming mode: {data['streamingMode']}")
+	print(f"Panel: {data['panel']}")
 
 # Function open_door()
 def open_door():
