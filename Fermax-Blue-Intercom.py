@@ -351,7 +351,7 @@ def get_pairings_info_json():
 	print(f"------------")
 	print(f"ID: {data2}")
 
-# Función get_mydevice_info()
+# Function get_mydevice_info()
 def get_mydevice_info():
 	"""Obtains information from the user's intercom"""
 
@@ -394,6 +394,28 @@ def get_mydevice_info():
 	print(f"Terminal: {data['terminal']}")
 	print(f"Streaming mode: {data['streamingMode']}")
 	print(f"Panel: {data['panel']}")
+
+# Function get_mydevice_info()
+def get_mydevice_info_json():
+	"""Gets the user's intercom information in .json format"""
+	
+	# Perform the GET request
+	url = "https://blue.fermax.com/deviceaction/api/v1/device/{}".format(deviceId)
+	response = requests.get(url, headers=get_json_headers(bearer_token))
+
+	# Check the status of the response
+	if response.status_code != 200:
+		print(f"\nError when obtaining information from the Intercom: Error {response.status_code}")
+		return
+			
+	# Decode the content of the response
+	data = response.json()
+
+	# Show the information of the Intercom:
+	print(f"\n------------")
+	print(f"INTERCOM INFO (JSON)")
+	print(f"------------")
+	print(f" {data}")
 
 # Function open_door()
 def open_door():
