@@ -212,6 +212,42 @@ def get_token():
 	
 	return bearer_token
 
+# Function get_user_info()
+def get_user_info():
+	"""Gets user information"""
+	
+	# Perform the GET request
+	url = "https://blue.fermax.com/user/api/v1/users/me"
+	response = requests.get(url, headers=get_json_headers(bearer_token))
+
+	# Check the status of the response
+	if response.status_code != 200:
+		print(f"Error obtaining user information: Error {response.status_code}")
+		return
+			
+	# Decode the content of the response
+	data = response.json()
+
+	# Display user information
+	print(f"\n------------")
+	print(f"USER INFO")
+	print(f"------------")
+	print(f"Name: {data['name']}")
+	print(f"Language: {data['locale']}")
+	print(f"Email: {data['email']}")
+	print(f"Accept Sharing: {data['acceptSharing']}")
+	print(f"Accept Privacy: {data['acceptPrivacy']}")
+	print(f"Enabled: {data['enabled']}")
+	print(f"Created at: {data['createdAt']}")
+	print(f"City: {data['city']}")
+	print(f"Area: {data['area']}")
+	print(f"Zone: {data['zone']}")
+	print(f"Subzone: {data['subzone']}")
+	print(f"Pin: {data['pin']}")
+	print(f"Date of the pin: {data['pinDate']}")
+	print(f"Unique session: {data['uniqueSession']}")
+	print(f"Provider: {data['provider']}")
+
 # Function open_door()
 
 def open_door():
@@ -242,7 +278,6 @@ def open_door():
 			result = directed_opendoor(bearer_token, deviceId, accessIds[0])
 			logging.info(f'Result: {result}')
 
-
 # Program
 
 # Get the access token.
@@ -254,6 +289,10 @@ pairings(bearer_token)
 # Get the device ID and access ID.
 deviceId = pairings(bearer_token)[1]
 accessId = pairings(bearer_token)[2]
+
+# If the user enters the argument "--user-info"
+if args.user_info:
+	get_user_info()
 
 # If the user enters the argument "--open-door"
 if args.open_door:
