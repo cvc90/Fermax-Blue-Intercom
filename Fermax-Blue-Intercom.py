@@ -460,7 +460,7 @@ def get_mydevice_history():
 
 # Función get_mydevice_history_json()
 def get_mydevice_history_json():
-	"""Obtiene el historial del interfono del usuario en formato json."""
+	"""Gets the user's intercom history in json format"""
 	
 	# Perform the GET request
 	url = "https://blue.fermax.com/services2/api/v1/services/{}".format(deviceId)
@@ -468,15 +468,15 @@ def get_mydevice_history_json():
 
 	# Check the status of the response
 	if response.status_code != 200:
-		print(f"\nError al obtener la información del Interfono: {response.status_code}")
+		print(f"\nError when obtaining information from the Intercom: Error {response.status_code}")
 		return
 			
 	# Decode the content of the response
 	data = response.json()
 
-	# Mostramos la información del usuario
+	# Show the user's intercom history in .json format
 	print(f"\n------------")
-	print(f"HISTORIAL INTERFONO (JSON)")
+	print(f"INTERCOM HISTORY (JSON)")
 	print(f"------------")
 	print(f"{data}")
 
