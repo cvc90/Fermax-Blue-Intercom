@@ -305,6 +305,28 @@ def get_pairings_info():
 	print(f"Access door map: {data2[0].get('accessDoorMap')}")	
 	print(f"Master: {data2[0].get('master')}")
 
+# Function get_pairings_info_json()
+def get_pairings_info_json():
+	"""Gets the user's paired device information in .json format"""
+	
+	# Perform the GET request
+	url = "https://blue.fermax.com/pairing/api/v3/pairings/me"
+	response = requests.get(url, headers=get_json_headers(bearer_token))
+
+	# Check the status of the response
+	if response.status_code != 200:
+		print(f"\nError in obtaining information from paired devices: Error {response.status_code}")
+		return
+			
+	# Decode the content of the response
+	data2 = response.json()
+
+	# Show the information of the paired devices
+	print(f"\n------------")
+	print(f"INFO PAIRED DEVICES (JSON)")
+	print(f"------------")
+	print(f"ID: {data2}")
+
 
 # Function open_door()
 def open_door():
@@ -358,6 +380,10 @@ if args.user_info:
 # If the user enters the argument "--pairings-info"
 if args.pairings_info:
 	get_pairings_info()
+
+# If the user enters the argument "--pairings-info-json"
+if args.pairings_info_json:
+	get_pairings_info_json()
 
 # If the user enters the argument "--open-door"
 if args.open_door:
