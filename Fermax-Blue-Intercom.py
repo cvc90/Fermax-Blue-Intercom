@@ -37,9 +37,25 @@ parser.add_argument('--accessId', type=str, nargs='+',
 parser.add_argument('--cache', type=bool,
                     help='Optionally set if cache is used to save/read auth token (enabled by default)', default=True)
 parser.add_argument('--reauth', action='store_true',
-                    help='Forces authentication (when using this option no door will be open)')
+                    help='Forces authentication (when using this option no door will be open)')	
+parser.add_argument('--user-info', action='store_true',
+                    help='Shows user account information')
+parser.add_argument('--user-info-json', action='store_true',
+                    help='Shows user account information in .json format')							
+parser.add_argument('--pairings-info', action='store_true',
+                    help='Shows information about the devices paired in the user account.')
+parser.add_argument('--pairings-info-json', action='store_true',
+                    help='Shows information about the devices paired in the user account in .json format.')
+parser.add_argument('--mydevice-info', action='store_true',
+                    help='Shows information about the device in the user account.')
+parser.add_argument('--mydevice-info-json', action='store_true',
+                    help='Shows information about the device in the user account in .json format')	
+parser.add_argument('--mydevice-history', action='store_true',
+                    help='Shows history about the device in the user account.')
+parser.add_argument('--mydevice-history-json', action='store_true',
+                    help='Shows history about the device in the user account in .json format')				
 parser.add_argument('--open-door', action='store_true',
-                    help='Acción de abrir la puerta')
+                    help='Action of opening the door')						
 args = parser.parse_args()
 
 username = args.username
@@ -48,6 +64,14 @@ deviceId = args.deviceId
 accessIds = args.accessId
 cache = args.cache
 reauth = args.reauth
+info_user = args.user_info
+info_user_json = args.user_info_json
+pairings_info = args.pairings_info
+pairings_info_json = args.pairings_info_json
+mydevice_info = args.mydevice_info
+mydevice_info = args.mydevice_info_json
+mydevice_info = args.mydevice_history
+mydevice_info = args.mydevice_history_json
 opendoor = args.open_door
 
 if (deviceId and not accessIds) or (accessIds and not deviceId):
