@@ -12,7 +12,7 @@ Fermax Blue script to connect with the API (Show user information, Show intercom
 
 1. Clone the repository and navigate to the root directory.
 2. Install the requests module by running `pip install requests`.
-3. Run the script with the required arguments: `python3 open_door.py --username <USERNAME> --password <PASSWORD>`.
+3. Run the script with the required arguments: `python3 Fermax-Blue-Intercom.py --username <USERNAME> --password <PASSWORD>`.
 4. If you want to avoid extra fetching, you can also provide the optional `--deviceId` and `--accessId` arguments.
 5. The script will output a message indicating whether the door was successfully opened or not.
 
@@ -31,43 +31,43 @@ Fermax Blue script to connect with the API (Show user information, Show intercom
 
 You can use this script with Home Assistant using the `shell_command` integration.
 
-Save it in a directory under `config`, something like `your_home_assistant_dir/config/python_scripts/open_door.py`, then add the following to your `configuration.yaml`:
+Save it in a directory under `config`, something like `your_home_assistant_dir/config/python_scripts/Fermax-Blue-Intercom.py`, then add the following to your `configuration.yaml`:
 
 *NOTE: Check how it is used in the examples below.*
 
 ```
 shell_command:
-  open_door: 'python3 python_scripts/open_door.py --username USERNAME --password PASSWORD ...'
+  open_door: 'python3 python_scripts/Fermax-Blue-Intercom.py --username USERNAME --password PASSWORD ...'
 ```
 
 ### Opening first door (maybe ZERO?)
 
 ```bash
-open_door.py --username email@domain.com --password yourpassword
+Fermax-Blue-Intercom.py --username email@domain.com --password yourpassword
 ```
 
 ### Opening first door and disabling auth token cache
 
 ```bash
-open_door.py --username email@domain.com --password yourpassword --cache False
+Fermax-Blue-Intercom.py --username email@domain.com --password yourpassword --cache False
 ```
 
 ### Opening the provided door
 
 ```bash
-open_door.py --username email@domain.com --password yourpassword --deviceId 12345 --accessId '{"subblock": 0, "block": 0, "number": 0}'
+Fermax-Blue-Intercom.py --username email@domain.com --password yourpassword --deviceId 12345 --accessId '{"subblock": 0, "block": 0, "number": 0}'
 ```
 
 ### Opening multiple doors
 
 ```bash
-open_door.py --username email@domain.com --password yourpassword --deviceId 12345 --accessId '{"subblock": 0, "block": 0, "number": 0}' '{"subblock": 1, "block": 1, "number": 1}'
+Fermax-Blue-Intercom.py --username email@domain.com --password yourpassword --deviceId 12345 --accessId '{"subblock": 0, "block": 0, "number": 0}' '{"subblock": 1, "block": 1, "number": 1}'
 ```
 
 ### Force authentication
 
 ```bash
-open_door.py --username email@domain.com --password yourpassword --reauth
+Fermax-Blue-Intercom.py --username email@domain.com --password yourpassword --reauth
 ```
 
 ## 👷 How it works
