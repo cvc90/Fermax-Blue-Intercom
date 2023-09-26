@@ -248,7 +248,7 @@ def get_user_info():
 	print(f"Unique session: {data['uniqueSession']}")
 	print(f"Provider: {data['provider']}")
 
-# Function get_user_info_json().
+# Function get_user_info_json()
 def get_user_info_json():
 	"""Gets the user information in json format"""
 	
@@ -270,7 +270,7 @@ def get_user_info_json():
 	print(f"------------")
 	print(f"{data}")
 
-# Function get_pairings_info().
+# Function get_pairings_info()
 def get_pairings_info():
 	"""Obtains information from the user's paired devices"""
 
