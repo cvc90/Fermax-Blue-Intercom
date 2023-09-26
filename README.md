@@ -107,11 +107,11 @@ This script was tested on a Fermax 9449.
 ## 🏴 Translations of this file
 
 * <a href="README_ES.md">
-   <img src="https://github.com/lipis/flag-icons/blob/main/flags/4x3/es.svg" alt="README_ES.md" width="3%" height="3%"> Spanish (Spain)
+   <img src="https://github.com/lipis/flag-icons/blob/main/flags/4x3/es.svg" alt="README_ES.md" width="3%" height="3%"> Spanish
   </a>
 
 * <a href="README_DE.md">
-   <img src="https://github.com/lipis/flag-icons/blob/main/flags/4x3/de.svg" alt="README_DE.md" width="3%" height="3%"> German (Germany)
+   <img src="https://github.com/lipis/flag-icons/blob/main/flags/4x3/de.svg" alt="README_DE.md" width="3%" height="3%"> German
   </a> 
 
 ## ☕ Support me
