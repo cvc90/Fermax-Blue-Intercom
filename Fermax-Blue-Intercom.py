@@ -248,6 +248,28 @@ def get_user_info():
 	print(f"Unique session: {data['uniqueSession']}")
 	print(f"Provider: {data['provider']}")
 
+# Function get_user_info_json().
+def get_user_info_json():
+	"""Gets the user information in json format"""
+	
+	# Perform the GET request
+	url = "https://blue.fermax.com/user/api/v1/users/me"
+	response = requests.get(url, headers=get_json_headers(bearer_token))
+
+	# Check the status of the response
+	if response.status_code != 200:
+		print(f"Error al obtener la información del usuario: {response.status_code}")
+		return
+			
+	# Decode the content of the response
+	data = response.json()
+
+	# Display user information in json format
+	print(f"\n------------")
+	print(f"USER INFO (JSON)")
+	print(f"------------")
+	print(f"{data}")
+
 # Function open_door()
 
 def open_door():
@@ -293,6 +315,10 @@ accessId = pairings(bearer_token)[2]
 # If the user enters the argument "--user-info"
 if args.user_info:
 	get_user_info()
+
+# If the user enters the argument "--user-info-json"
+if args.user_info:
+	get_user_info_json()
 
 # If the user enters the argument "--open-door"
 if args.open_door:
