@@ -24,6 +24,15 @@ Fermax Blue script to connect with the API (Show user information, Show intercom
 -   `--accessId`: Optional. Access ID(s) to avoid extra fetching (use with deviceId).
 -   `--cache`: Optional. Set to False if you don't want to use the cache to save the auth token (enabled by default).
 -   `--reauth`: Optional. Use it to just force reauth, when using this option no door will be open, just use it to refresh the token, check your credentials...
+-   `--user-info`: Optional. Fermax Blue user account information.
+-   `--user-info-json`: Optional. Fermax Blue user account information in .json format.
+-   `--pairings-info`: Optional. Information about the paired devices of the Fermax Blue user account.
+-   `--pairings-info-json`: Optional. Information about the paired devices of the Fermax Blue user account in .json format.
+-   `--mydevice-info`: Optional. Information about the Fermax Blue user account devices.
+-   `--mydevice-info-json`: Optional. Information about the Fermax Blue user account devices in .json format.
+-   `--mydevice-info`: Optional. History of Fermax Blue user account devices.
+-   `--mydevice-info-json`: Optional. History of Fermax Blue user account devices in .json format.
+-   `--open-door`: Optional. Action to open the door.
 
 ## Examples
 
