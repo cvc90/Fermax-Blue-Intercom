@@ -409,6 +409,26 @@ if args.pairings_info:
 if args.pairings_info_json:
 	get_pairings_info_json()
 
+# If the user enters the argument "--pairings-info-json"
+if args.pairings_info_json:
+	get_pairings_info_json()
+
+# If the user enters the argument "--mydevice-info"	
+if args.mydevice_info:
+	get_mydevice_info()
+
+# If the user enters the argument "--mydevice-info-json"	
+if args.mydevice_info_json:
+	get_mydevice_info_json()
+
+# If the user enters the argument "--mydevice-history"
+if args.mydevice_history:
+	get_mydevice_history()
+
+# If the user enters the argument "--mydevice-history-json"	
+if args.mydevice_history_json:
+	get_mydevice_history_json()
+
 # If the user enters the argument "--open-door"
 if args.open_door:
 	open_door()	
