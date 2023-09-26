@@ -258,7 +258,7 @@ def get_user_info_json():
 
 	# Check the status of the response
 	if response.status_code != 200:
-		print(f"Error al obtener la información del usuario: {response.status_code}")
+		print(f"Error obtaining user information in json format: Error {response.status_code}")
 		return
 			
 	# Decode the content of the response
@@ -280,7 +280,7 @@ def get_pairings_info():
 
 	# Check the status of the response
 	if response.status_code != 200:
-		print(f"\nError al obtener la información de los dispositivos pareados: {response.status_code}")
+		print(f"\nError al obtener la información de los dispositivos pareados: Error{response.status_code}")
 		return
 
 	# Decode the content of the response
