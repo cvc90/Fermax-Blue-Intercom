@@ -47,6 +47,10 @@ url_script = "https://github.com/cvc90/Fermax-Blue-Intercom/"
 
 author = "cvc90 / Carlos V."
 
+# License
+
+license = "GPL 3.0"
+
 # Input values
 
 parser = argparse.ArgumentParser()
