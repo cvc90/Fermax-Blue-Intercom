@@ -53,7 +53,7 @@ author = "cvc90 / Carlos V."
 
 # License
 
-license = "GPL 3.0"
+license = "AGPL v3.0"
 
 # Input values
 
