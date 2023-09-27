@@ -18,23 +18,23 @@ Fermax Blue Skript zur Verbindung mit der API (Benutzerinformationen anzeigen, G
 
 ## 📑 Argumente
 
-- `-Benutzername`: Erforderlich. Fermax Blue Konto-Benutzername.
-- `--Passwort`: Erforderlich. Passwort des Fermax Blue-Kontos.
-- `-Geräte-ID`: Optional. Geräte-ID, um zusätzliche Abrufe zu vermeiden (erfordert accessId).
-- `--accessId`: Optional. Zugriffs-ID(s) zur Vermeidung zusätzlicher Abrufe (Verwendung mit deviceId).
-- Cache": Optional. Setzen Sie auf False, wenn Sie den Cache nicht zum Speichern des Auth-Tokens verwenden wollen (standardmäßig aktiviert).
---reauth`: Optional. Verwenden Sie diese Option, um eine erneute Authentifizierung zu erzwingen. Wenn Sie diese Option verwenden, wird keine Tür geöffnet, sondern nur das Token aktualisiert, Ihre Anmeldedaten überprüft...
-- `-Benutzer-Infos`: Optional. Fermax Blue Benutzerkontoinformationen.
-- `--benutzer-info-json`: Optional. Fermax Blue Benutzerkontoinformationen im .json-Format.
-- Paare-Infos": Wahlweise. Informationen über die gepaarten Geräte des Fermax Blue Benutzerkontos.
-- `-Paarungen-info-json`: Optional. Informationen über die gepaarten Geräte des Fermax Blue-Benutzerkontos im .json-Format.
-- mydevice-info": Optional. Informationen über die Geräte des Fermax Blue Benutzerkontos.
-- `--mydevice-info-json`: Optional. Informationen über die Geräte des Fermax Blue-Benutzerkontos im .json-Format.
-- mydevice-info": Optional. Historie der Fermax Blue Benutzerkonto-Geräte.
-- `--mydevice-info-json`: Optional. Historie der Fermax Blue Benutzerkonto-Geräte im .json-Format.
-- `--Open-Door`: Optional. Aktion zum Öffnen der Tür.
-- `--credits`: Optional. Skriptversion anzeigen.
-- `--version`: Optional. Skript-Credits anzeigen.
+-   `--username`: Erforderlich. Fermax Blue Konto-Benutzername.
+-   `--password`: Erforderlich. Passwort des Fermax Blue-Kontos.
+-   `--deviceId`: Optional. Geräte-ID, um zusätzliche Abrufe zu vermeiden (erfordert accessId).
+-   `--accessId`: Optional. Zugriffs-ID(s) zur Vermeidung zusätzlicher Abrufe (Verwendung mit deviceId).
+-   `--cache`: Optional. Setzen Sie auf False, wenn Sie den Cache nicht zum Speichern des Auth-Tokens verwenden wollen (standardmäßig aktiviert).
+-   `--reauth`: Optional. Verwenden Sie diese Option, um eine erneute Authentifizierung zu erzwingen. Wenn Sie diese Option verwenden, wird keine Tür geöffnet, sondern nur das Token aktualisiert, Ihre Anmeldedaten überprüft...
+-   `--user-info`: Optional. Fermax Blue Benutzerkontoinformationen.
+-   `--user-info-json`: Optional. Fermax Blue Benutzerkontoinformationen im .json-Format.
+-   `--pairings-info`: Wahlweise. Informationen über die gepaarten Geräte des Fermax Blue Benutzerkontos.
+-   `--pairings-info-json`:  Optional. Informationen über die gepaarten Geräte des Fermax Blue-Benutzerkontos im .json-Format.
+-   `--mydevice-info`: Optional. Informationen über die Geräte des Fermax Blue Benutzerkontos.
+-   `--mydevice-info-json`: Optional. Informationen über die Geräte des Fermax Blue-Benutzerkontos im .json-Format.
+-   `--mydevice-history`: Optional. Historie der Fermax Blue Benutzerkonto-Geräte.
+-   `--mydevice-history-json`: Optional. Historie der Fermax Blue Benutzerkonto-Geräte im .json-Format.
+-   `--open-door`: Optional. Aktion zum Öffnen der Tür.
+-   `--credits`: Optional. Skriptversion anzeigen.
+-   `--version`: Optional. Skript-Credits anzeigen.
 
 ## Beispiele
 
