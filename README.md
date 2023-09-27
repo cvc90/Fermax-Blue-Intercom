@@ -130,4 +130,4 @@ Feel free to donate whatever you want to the following addresses:
 - RTM: `RWRYFXpXwrWnWFzPSrp4oyCV6QYaWD3eqX`
 
 ## 📑 License
-  GPL 3.0 | [Read more here](LICENSE.md) | Source of the [animated GIF (Loading Animation)](https://commons.wikimedia.org/wiki/File:Loading_Animation.gif) | Source of the [selfhosted Fonts](https://github.com/adobe-fonts/source-sans)
+  AGPL 3.0 | [Read more here](LICENSE.md) | Source of the [animated GIF (Loading Animation)](https://commons.wikimedia.org/wiki/File:Loading_Animation.gif) | Source of the [selfhosted Fonts](https://github.com/adobe-fonts/source-sans)
