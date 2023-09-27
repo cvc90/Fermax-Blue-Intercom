@@ -130,4 +130,4 @@ Sie können an die folgenden Adressen spenden, was immer Sie wollen:
 - RTM: `RWRYFXpXwrWnWFzPSrp4oyCV6QYaWD3eqX`
 
 ## 📑 Lizenz
-  GPL 3.0 | [Hier mehr lesen](LICENSE.md) | Quelle des [animierten GIF (Ladeanimation)](https://commons.wikimedia.org/wiki/File:Loading_Animation.gif) | Quelle der [selbst gehosteten Schriftarten](https://github.com/adobe-fonts/source-sans)
+  AGPL 3.0 | [Hier mehr lesen](LICENSE.md) | Quelle des [animierten GIF (Ladeanimation)](https://commons.wikimedia.org/wiki/File:Loading_Animation.gif) | Quelle der [selbst gehosteten Schriftarten](https://github.com/adobe-fonts/source-sans)
