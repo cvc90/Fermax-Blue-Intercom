@@ -27,6 +27,10 @@ from urllib.parse import quote
 
 version_script = "1.1"
 
+# Buil date 
+
+build_date = "27/09/2023"
+
 # Github URL 
 
 url_script = "https://github.com/cvc90/Fermax-Blue-Intercom/"
@@ -553,6 +557,7 @@ def get_version_script():
 	# Show the message with the current version of the script
 	print(f"\n")
 	print(f"Version: {version_script}")
+	print(f"Build date: {build_date}")	
 
 # Program
 
