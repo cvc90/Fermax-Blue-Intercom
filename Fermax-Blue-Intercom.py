@@ -27,6 +27,10 @@ from urllib.parse import quote
 
 version_script = "1.0"
 
+# Github URL 
+
+url_script = "https://github.com/cvc90/Fermax-Blue-Intercom/"
+
 # Input values
 
 parser = argparse.ArgumentParser()
