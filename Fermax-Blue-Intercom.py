@@ -43,6 +43,10 @@ build_date = "27/09/2023"
 
 url_script = "https://github.com/cvc90/Fermax-Blue-Intercom/"
 
+# Author's Github URL 
+
+url_script_author = "https://github.com/cvc90/"
+
 # Author
 
 author = "cvc90 / Carlos V."
