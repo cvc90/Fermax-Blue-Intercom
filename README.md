@@ -30,8 +30,8 @@ Fermax Blue script to connect with the API (Show user information, Show intercom
 -   `--pairings-info-json`: Optional. Information about the paired devices of the Fermax Blue user account in .json format.
 -   `--mydevice-info`: Optional. Information about the Fermax Blue user account devices.
 -   `--mydevice-info-json`: Optional. Information about the Fermax Blue user account devices in .json format.
--   `--mydevice-info`: Optional. History of Fermax Blue user account devices.
--   `--mydevice-info-json`: Optional. History of Fermax Blue user account devices in .json format.
+-   `--mydevice-history`: Optional. History of Fermax Blue user account devices.
+-   `--mydevice-history-json`: Optional. History of Fermax Blue user account devices in .json format.
 -   `--open-door`: Optional. Action to open the door.
 -   `--credits`: Optional. Show script version.
 -   `--version`: Optional. Show script credits.
