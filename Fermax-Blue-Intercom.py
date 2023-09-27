@@ -96,6 +96,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 # Cache file path
 cache_file_path = os.path.join(script_dir, CACHE_FILENAME)
 
+# Function - Update cached token
 
 def update_cached_token(access_token: str, max_age: int):
     logging.info('Caching token...')
@@ -111,6 +112,7 @@ def update_cached_token(access_token: str, max_age: int):
     with open(cache_file_path, 'w') as file:
         json.dump(cached_content, file)
 
+# Function - Read cached token
 
 def read_cached_token() -> str:
     try:
@@ -134,6 +136,7 @@ def read_cached_token() -> str:
 
 
 # Fake client app and iOS device
+
 COMMON_HEADERS = {
     'app-version': '3.3.2',
     'accept-language': 'en-ES;q=1.0, es-ES;q=0.9, ru-ES;q=0.8',
@@ -143,8 +146,11 @@ COMMON_HEADERS = {
     'app-build': '3'
 }
 
+# Token access URL
 
 AUTH_URL = 'https://oauth.blue.fermax.com/oauth/token'
+
+# Authorization headers
 
 AUTH_HEADERS = {
     'Authorization': 'Basic ZHB2N2lxejZlZTVtYXptMWlxOWR3MWQ0MnNseXV0NDhrajBtcDVmdm81OGo1aWg6Yzd5bGtxcHVqd2FoODV5aG5wcnYwd2R2eXp1dGxjbmt3NHN6OTBidWxkYnVsazE=',
@@ -152,6 +158,7 @@ AUTH_HEADERS = {
 }
 AUTH_HEADERS.update(COMMON_HEADERS)
 
+# Function - Authentication 
 
 def auth(cache: bool, username: str, password: str) -> str:
     username = quote(username)
@@ -173,6 +180,7 @@ def auth(cache: bool, username: str, password: str) -> str:
 
     return access_token
 
+# Function - Get json headers 
 
 def get_json_headers(bearer_token: str) -> str:
     headers = {'Authorization': bearer_token,
@@ -181,9 +189,11 @@ def get_json_headers(bearer_token: str) -> str:
 
     return headers
 
+# Pairing url
 
 PAIRINGS_URL = 'https://blue.fermax.com/pairing/api/v3/pairings/me'
 
+# Function - Pairings
 
 def pairings(bearer_token: str) -> tuple:
     response = requests.request(
@@ -206,6 +216,7 @@ def pairings(bearer_token: str) -> tuple:
 
     return (tag, deviceId, accessIds)
 
+# Function - Directed opendoor
 
 def directed_opendoor(bearer_token: str, deviceId: str, accessId: str) -> str:
     directed_opendoor_url = f'https://blue.fermax.com/deviceaction/api/v1/device/{deviceId}/directed-opendoor'
@@ -217,7 +228,7 @@ def directed_opendoor(bearer_token: str, deviceId: str, accessId: str) -> str:
 
     return response.text
 
-# Function get_token()
+# Function - Get token
 
 def get_token():
 
@@ -236,7 +247,8 @@ def get_token():
 	
 	return bearer_token
 
-# Function get_user_info()
+# Function - Get user info
+
 def get_user_info():
 	"""Gets user information"""
 	
@@ -272,7 +284,8 @@ def get_user_info():
 	print(f"Unique session: {data['uniqueSession']}")
 	print(f"Provider: {data['provider']}")
 
-# Function get_user_info_json()
+# Function - Get user info json
+
 def get_user_info_json():
 	"""Gets the user information in json format"""
 	
@@ -294,7 +307,8 @@ def get_user_info_json():
 	print(f"------------")
 	print(f"{data}")
 
-# Function get_pairings_info()
+# Function - Get pairings info
+
 def get_pairings_info():
 	"""Obtains information from the user's paired devices"""
 
@@ -329,7 +343,8 @@ def get_pairings_info():
 	print(f"Access door map: {data2[0].get('accessDoorMap')}")	
 	print(f"Master: {data2[0].get('master')}")
 
-# Function get_pairings_info_json()
+# Function - Get pairings info json
+
 def get_pairings_info_json():
 	"""Gets the user's paired device information in .json format"""
 	
@@ -351,7 +366,8 @@ def get_pairings_info_json():
 	print(f"------------")
 	print(f"ID: {data2}")
 
-# Function get_mydevice_info()
+# Function - Get mydevice info
+
 def get_mydevice_info():
 	"""Obtains information from the user's intercom"""
 
@@ -395,7 +411,8 @@ def get_mydevice_info():
 	print(f"Streaming mode: {data['streamingMode']}")
 	print(f"Panel: {data['panel']}")
 
-# Function get_mydevice_info()
+# Function - Get mydevice info json
+
 def get_mydevice_info_json():
 	"""Gets the user's intercom information in .json format"""
 	
@@ -417,7 +434,8 @@ def get_mydevice_info_json():
 	print(f"------------")
 	print(f" {data}")
 
-# Function get_mydevice_history()
+# Function - Get mydevice history
+
 def get_mydevice_history():
 	"""Get the user's intercom history"""
 	
@@ -458,7 +476,8 @@ def get_mydevice_history():
 	print(f"Sessions unlimited: {data['SessionsUnlimited']}")
 	print(f"TZ: {data['TZ']}")
 
-# Function get_mydevice_history_json()
+# Function - Get mydevice history json
+
 def get_mydevice_history_json():
 	"""Gets the user's intercom history in json format"""
 	
@@ -480,7 +499,8 @@ def get_mydevice_history_json():
 	print(f"------------")
 	print(f"{data}")
 
-# Function open_door()
+# Function - Open door
+
 def open_door():
 	"""Open door"""
 	
