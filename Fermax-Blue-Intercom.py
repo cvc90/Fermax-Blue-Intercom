@@ -23,6 +23,10 @@ import time
 
 from urllib.parse import quote
 
+# Version Script
+
+version_script = "1.0"
+
 # Input values
 
 parser = argparse.ArgumentParser()
