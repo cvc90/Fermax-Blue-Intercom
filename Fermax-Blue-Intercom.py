@@ -27,6 +27,10 @@ from urllib.parse import quote
 
 name = "Fermax Blue Intercom"
 
+# Script description
+
+description = "Fermax Blue script to connect with the API (Show user information, Show intercom information, Intercom history, open the door)"
+
 # Version Script
 
 version_script = "1.1"
