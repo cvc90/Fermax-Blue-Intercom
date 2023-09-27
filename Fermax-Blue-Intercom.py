@@ -588,12 +588,12 @@ def get_credits():
 	
 	# Show the messages with the script credits
 	print(f"\n")
-	print(f"Nombre: {name}")
-	print(f"Descripcion: {description}")	
-	print(f"URL Github: {url_script}")
-	print(f"Author's Github URL: {url_script_author}")	
+	print(f"Name: {name}")
+	print(f"Description: {description}")
+	print(f"Github URL: {url_script}")
+	print(f"Author's Github URL: {url_script_author}")
 	print(f"Author: {author}")
-	print(f"Licencia: {license}")
+	print(f"License: {license}")
 
 # Program
 
