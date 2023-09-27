@@ -33,6 +33,8 @@ Script Fermax Blue para conectar con la API (Mostrar información de usuario, Mo
 - `--mydevice-info`: Opcional. Historial de dispositivos de la cuenta de usuario de Fermax Blue.
 - `--mydevice-info-json`: Opcional. Historial de dispositivos de la cuenta de usuario de Fermax Blue en formato .json.
 - `--open-door`: Opcional. Acción para abrir la puerta.
+- `--credits`: Opcional. Mostrar versión del script.
+- `--version`: Opcional. Mostrar créditos del script.
 
 ## Ejemplos
 
