@@ -23,6 +23,10 @@ import time
 
 from urllib.parse import quote
 
+# Script name
+
+name = "Fermax Blue Intercom"
+
 # Version Script
 
 version_script = "1.1"
