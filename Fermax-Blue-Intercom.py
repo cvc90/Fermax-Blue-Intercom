@@ -646,3 +646,7 @@ if args.open_door:
 # If the user enters the argument "--version"
 if args.version:
 	get_version_script()	
+
+# If the user enters the argument "--credits"
+if args.credits:
+	get_credits()
