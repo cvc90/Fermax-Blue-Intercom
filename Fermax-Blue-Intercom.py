@@ -509,6 +509,12 @@ def open_door():
 			result = directed_opendoor(bearer_token, deviceId, accessIds[0])
 			logging.info(f'Result: {result}')
 
+	# Show message if door is opened or failed to open
+  	if result == "la puerta abierta" or result == "the door is open":
+		print("\The door has been opened")
+	else:
+		print("\nError opening the door")
+
 # Program
 
 # Get the access token.
