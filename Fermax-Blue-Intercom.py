@@ -89,7 +89,9 @@ parser.add_argument('--mydevice-history-json', action='store_true',
 parser.add_argument('--open-door', action='store_true',
                     help='Action of opening the door')
 parser.add_argument('--version', action='store_true',
-                    help='Show script version')	
+                    help='Show script version')
+parser.add_argument('--credits', action='store_true',
+                    help='Show script credits')		
 args = parser.parse_args()
 
 username = args.username
