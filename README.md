@@ -89,7 +89,7 @@ Finally, the script sends a third HTTP request to the Fermax Blue API to open th
 
 ## ⚠️ Disclaimer
 
-This script was tested on a Fermax 9449.
+This script was tested on a Fermax VEO-XS WIFI 4,3" DUOX PLUS (REF: 9449)
 
 ## 📚 Documentation
 
