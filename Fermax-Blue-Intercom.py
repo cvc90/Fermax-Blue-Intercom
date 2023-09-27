@@ -135,10 +135,10 @@ def read_cached_token() -> str:
 
 # Fake client app and iOS device
 COMMON_HEADERS = {
-    'app-version': '3.2.1',
+    'app-version': '3.3.2',
     'accept-language': 'en-ES;q=1.0, es-ES;q=0.9, ru-ES;q=0.8',
     'phone-os': '16.4',
-    'user-agent': 'Blue/3.2.1 (com.fermax.bluefermax; build:3; iOS 16.4.0) Alamofire/3.2.1',
+    'user-agent': 'Blue/3.3.2 (com.fermax.bluefermax; build:3; iOS 16.4.0) Alamofire/3.3.2',
     'phone-model': 'iPad14,5',
     'app-build': '3'
 }
