@@ -571,7 +571,7 @@ def open_door():
 	else:
 		print("\nError opening the door")
 
-# Función - Get version script
+# Function - Get version script
 
 def get_version_script():
 	"""Gets the current version of the script"""
@@ -580,6 +580,20 @@ def get_version_script():
 	print(f"\n")
 	print(f"Version: {version_script}")
 	print(f"Build date: {build_date}")	
+
+# Function - Get credits
+
+def get_credits():
+	"""Script credits"""
+	
+	# Show the messages with the script credits
+	print(f"\n")
+	print(f"Nombre: {name}")
+	print(f"Descripcion: {description}")	
+	print(f"URL Github: {url_script}")
+	print(f"Author's Github URL: {url_script_author}")	
+	print(f"Author: {author}")
+	print(f"Licencia: {license}")
 
 # Program
 
