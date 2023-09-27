@@ -35,6 +35,10 @@ build_date = "27/09/2023"
 
 url_script = "https://github.com/cvc90/Fermax-Blue-Intercom/"
 
+# Author
+
+author = "cvc90 / Carlos V."
+
 # Input values
 
 parser = argparse.ArgumentParser()
