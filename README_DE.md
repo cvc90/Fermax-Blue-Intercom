@@ -89,7 +89,7 @@ Schließlich sendet das Skript eine dritte HTTP-Anfrage an die Fermax Blue API, 
 
 ## ⚠️ Haftungsausschluss
 
-Dieses Skript wurde auf einem Fermax 9449 getestet.
+Dieses Skript wurde auf einem Fermax VEO-XS WIFI 4,3" DUOX PLUS (REF: 9449)
 
 ## 📚 Dokumentation
 
