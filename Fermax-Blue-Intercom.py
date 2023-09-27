@@ -25,7 +25,7 @@ from urllib.parse import quote
 
 # Version Script
 
-version_script = "1.0"
+version_script = "1.1"
 
 # Github URL 
 
@@ -63,7 +63,9 @@ parser.add_argument('--mydevice-history', action='store_true',
 parser.add_argument('--mydevice-history-json', action='store_true',
                     help='Shows history about the device in the user account in .json format')				
 parser.add_argument('--open-door', action='store_true',
-                    help='Action of opening the door')						
+                    help='Action of opening the door')
+parser.add_argument('--version', action='store_true',
+                    help='Show script version')	
 args = parser.parse_args()
 
 username = args.username
@@ -543,6 +545,15 @@ def open_door():
 	else:
 		print("\nError opening the door")
 
+# Función - Get version script
+
+def get_version_script():
+	"""Gets the current version of the script"""
+	
+	# Show the message with the current version of the script
+	print(f"\n")
+	print(f"Version: {version_script}")
+
 # Program
 
 # Get the access token.
@@ -589,4 +600,8 @@ if args.mydevice_history_json:
 
 # If the user enters the argument "--open-door"
 if args.open_door:
-	open_door()	
+	open_door()
+
+# If the user enters the argument "--version"
+if args.version:
+	get_version_script()	
