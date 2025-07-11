@@ -418,7 +418,6 @@ def get_mydevice_info():
 			
 	# Decode the content of the response
 	data = response.json()
-
 	# Show the user's intercom information
 	print(f"\n------------")
 	print(f"INTERCOM INFO")
@@ -438,14 +437,14 @@ def get_mydevice_info():
 	print(f"Divert service: {data['divertService']}")
 	print(f"Photocaller: {data['photocaller']}")
 	print(f"Wireless signal: {data['wirelessSignal']}")
-	print(f"BlueStream: {data['blueStream']}")
-	print(f"Phone: {data['phone']}")
-	print(f"Monitor: {data['monitor']}")
-	print(f"Panel or edibox: {data['panelOrEdibox']}")
-	print(f"Monitor or guard unit: {data['monitorOrGuardUnit']}")
-	print(f"Terminal: {data['terminal']}")
+	print(f"Is BlueStream: {data['isBlueStream']}")
+	print(f"Is Phone: {data['isPhone']}")
+	print(f"Is Monitor: {data['isMonitor']}")
+	print(f"Is Panel or edibox: {data['isPanelOrEdibox']}")
+	print(f"Is Monitor or guard unit: {data['isMonitorOrGuardUnit']}")
+	print(f"Is Terminal: {data['isTerminal']}")
 	print(f"Streaming mode: {data['streamingMode']}")
-	print(f"Panel: {data['panel']}")
+	print(f"Is Panel: {data['isPanel']}")
 
 # Function - Get mydevice info json
 
@@ -567,7 +566,7 @@ def open_door():
 
 	# Show message if door is opened or failed to open
 	if result == "la puerta abierta" or result == "the door is open":
-		print("\The door has been opened")
+		print("\nThe door has been opened")
 	else:
 		print("\nError opening the door")
 
