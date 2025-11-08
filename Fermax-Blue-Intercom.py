@@ -184,7 +184,7 @@ COMMON_HEADERS = {
 
 # Token access URL
 
-AUTH_URL = 'https://oauth.blue.fermax.com/oauth/token'
+AUTH_URL = 'https://oauth-pro-duoxme.fermax.io/oauth/token'
 
 # Authorization headers
 
@@ -227,7 +227,7 @@ def get_json_headers(bearer_token: str) -> str:
 
 # Pairing url
 
-PAIRINGS_URL = 'https://blue.fermax.com/pairing/api/v3/pairings/me'
+PAIRINGS_URL = 'https://pro-duoxme.fermax.io/pairing/api/v3/pairings/me'
 
 # Function - Pairings
 
@@ -255,7 +255,7 @@ def pairings(bearer_token: str) -> tuple:
 # Function - Directed opendoor
 
 def directed_opendoor(bearer_token: str, deviceId: str, accessId: str) -> str:
-    directed_opendoor_url = f'https://blue.fermax.com/deviceaction/api/v1/device/{deviceId}/directed-opendoor'
+    directed_opendoor_url = f'https://pro-duoxme.fermax.io/deviceaction/api/v1/device/{deviceId}/directed-opendoor'
 
     payload = json.dumps(accessId)
 
@@ -289,7 +289,7 @@ def get_user_info():
 	"""Gets user information"""
 	
 	# Perform the GET request
-	url = "https://blue.fermax.com/user/api/v1/users/me"
+	url = "https://pro-duoxme.fermax.io/user/api/v1/users/me"
 	response = requests.get(url, headers=get_json_headers(bearer_token))
 
 	# Check the status of the response
@@ -326,7 +326,7 @@ def get_user_info_json():
 	"""Gets the user information in json format"""
 	
 	# Perform the GET request
-	url = "https://blue.fermax.com/user/api/v1/users/me"
+	url = "https://pro-duoxme.fermax.io/user/api/v1/users/me"
 	response = requests.get(url, headers=get_json_headers(bearer_token))
 
 	# Check the status of the response
@@ -349,7 +349,7 @@ def get_pairings_info():
 	"""Obtains information from the user's paired devices"""
 
 	# Perform the GET request
-	url = "https://blue.fermax.com/pairing/api/v3/pairings/me"
+	url = "https://pro-duoxme.fermax.io/pairing/api/v3/pairings/me"
 	response = requests.get(url, headers=get_json_headers(bearer_token))
 
 	# Check the status of the response
@@ -385,7 +385,7 @@ def get_pairings_info_json():
 	"""Gets the user's paired device information in .json format"""
 	
 	# Perform the GET request
-	url = "https://blue.fermax.com/pairing/api/v3/pairings/me"
+	url = "https://pro-duoxme.fermax.io/pairing/api/v3/pairings/me"
 	response = requests.get(url, headers=get_json_headers(bearer_token))
 
 	# Check the status of the response
@@ -408,7 +408,7 @@ def get_mydevice_info():
 	"""Obtains information from the user's intercom"""
 
 	# Perform the GET request
-	url = "https://blue.fermax.com/deviceaction/api/v1/device/{}".format(deviceId)
+	url = "https://pro-duoxme.fermax.io/deviceaction/api/v1/device/{}".format(deviceId)
 	response = requests.get(url, headers=get_json_headers(bearer_token))
 
 	# Check the status of the response
@@ -452,7 +452,7 @@ def get_mydevice_info_json():
 	"""Gets the user's intercom information in .json format"""
 	
 	# Perform the GET request
-	url = "https://blue.fermax.com/deviceaction/api/v1/device/{}".format(deviceId)
+	url = "https://pro-duoxme.fermax.io/deviceaction/api/v1/device/{}".format(deviceId)
 	response = requests.get(url, headers=get_json_headers(bearer_token))
 
 	# Check the status of the response
@@ -475,7 +475,7 @@ def get_mydevice_history():
 	"""Get the user's intercom history"""
 	
 	# Perform the GET request
-	url = "https://blue.fermax.com/services2/api/v1/services/{}".format(deviceId)
+	url = "https://pro-duoxme.fermax.io/services2/api/v1/services/{}".format(deviceId)
 	response = requests.get(url, headers=get_json_headers(bearer_token))
 
 	# Check the status of the response
@@ -517,7 +517,7 @@ def get_mydevice_history_json():
 	"""Gets the user's intercom history in json format"""
 	
 	# Perform the GET request
-	url = "https://blue.fermax.com/services2/api/v1/services/{}".format(deviceId)
+	url = "https://pro-duoxme.fermax.io/services2/api/v1/services/{}".format(deviceId)
 	response = requests.get(url, headers=get_json_headers(bearer_token))
 
 	# Check the status of the response
