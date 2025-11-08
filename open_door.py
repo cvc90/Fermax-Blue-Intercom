@@ -96,7 +96,7 @@ COMMON_HEADERS = {
 }
 
 
-AUTH_URL = 'https://oauth.blue.fermax.com/oauth/token'
+AUTH_URL = 'https://oauth-pro-duoxme.fermax.io/oauth/token'
 
 AUTH_HEADERS = {
     'Authorization': 'Basic ZHB2N2lxejZlZTVtYXptMWlxOWR3MWQ0MnNseXV0NDhrajBtcDVmdm81OGo1aWg6Yzd5bGtxcHVqd2FoODV5aG5wcnYwd2R2eXp1dGxjbmt3NHN6OTBidWxkYnVsazE=',
@@ -134,7 +134,7 @@ def get_json_headers(bearer_token: str) -> str:
     return headers
 
 
-PAIRINGS_URL = 'https://blue.fermax.com/pairing/api/v3/pairings/me'
+PAIRINGS_URL = 'https://pro-duoxme.fermax.io/pairing/api/v3/pairings/me'
 
 
 def pairings(bearer_token: str) -> tuple:
@@ -160,7 +160,7 @@ def pairings(bearer_token: str) -> tuple:
 
 
 def directed_opendoor(bearer_token: str, deviceId: str, accessId: str) -> str:
-    directed_opendoor_url = f'https://blue.fermax.com/deviceaction/api/v1/device/{deviceId}/directed-opendoor'
+    directed_opendoor_url = f'https://pro-duoxme.fermax.io/deviceaction/api/v1/device/{deviceId}/directed-opendoor'
 
     payload = json.dumps(accessId)
 
