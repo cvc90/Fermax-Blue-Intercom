@@ -33,8 +33,8 @@ Fermax Blue Skript zur Verbindung mit der API (Benutzerinformationen anzeigen, G
 -   `--mydevice-history`: Optional. Historie der Fermax Blue Benutzerkonto-Geräte.
 -   `--mydevice-history-json`: Optional. Historie der Fermax Blue Benutzerkonto-Geräte im .json-Format.
 -   `--open-door`: Optional. Aktion zum Öffnen der Tür.
--   `--credits`: Optional. Skriptversion anzeigen.
--   `--version`: Optional. Skript-Credits anzeigen.
+-   `--credits`: Optional. Skript-Credits anzeigen.
+-   `--version`: Optional. Skriptversion anzeigen.
 
 ## Beispiele
 
